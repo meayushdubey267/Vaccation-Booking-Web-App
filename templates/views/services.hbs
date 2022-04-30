@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    {{!-- both link are refering to the same bootstrap
+    only css is defined as node_modules/bootstrap/dist/css in app.js --}}
+    <style>
+        #vertical {
+            border-right: 6px solid rgb(77, 82, 11);
+            height: 250px;
+        }
+        #vertical:hover{
+            
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+    {{>navbar}}
+    {{!-- <button class="btn btn-success">services Pages</button>
+    <H1>services page</H1> --}}
+
+    <div class="container">
+        <div class="container px-4 py-5" id="featured-3">
+            <h1 class="pb-2 border-bottom text-center" style="color: rgb(8, 46, 116); font-family: 'Open Sans Condensed', sans-serif;">Our Services</h1>
+            <h5 class="pb-2 border-bottom text-center mb-4" style="color:rgb(8, 46, 116) ">Services @ Destinations.com </h5>
+
+            <div class="row g-4 py-5 row-cols-1 row-cols-lg-3" style="background-color: #a3a3a3;">
+                <div class="feature col" id="vertical" >
+                    
+                    <h2 >Night Camping</h2>
+                    <p>We provide night camping with tents and all the basic amenties required. Beverages are 
+                        also served on demand. </p>
+                    <button type="button" class="btn btn-secondary btn-sm">Read More</button>
+                    
+                </div>
+                <div class="feature col" id="vertical">
+                    
+                    <h2>Hanging Garden</h2>
+                    <p>Hanging Garden with a pleasent view of the Himalyas top. All the basic need of camping is 
+                        provided with prefered fooding and Beverages.</p>
+                    <button type="button" class="btn btn-secondary btn-sm">Read More</button>
+                    
+                </div>
+                <div class="feature col" id="vertical">
+                    
+                    <h2>Bike Riding</h2>
+                    <p>High-end bikes are available and a complete tour guide with a road map of 
+                        Leh-Ladhak along with riding gears and High end cameras and drone.  </p>
+                    <button type="button" class="btn btn-secondary btn-sm">Read More</button>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="container px-4 py-5" id="featured-3" style="background-color: #a3a3a3;;">
+            {{!-- <h2 class="pb-2 border-bottom">Columns with icons</h2> --}}
+            <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+                <div class="feature col" id="vertical" >
+                    
+                    <h2>River Rafting</h2>
+                    <p>River_rafting with a group of (minimum 6 pepole) is accessible with all the required
+                        guards and a tour guide .</p>
+                    <button type="button" class="btn btn-secondary btn-sm">Read More</button>                    
+                                            
+                </div>
+                <div class="feature col" id="vertical">
+                    
+                    <h2>Bunjee Jumping</h2>
+                    <p>Bunjee Jumping for guys under 100kg and aged below 60years are allowed. all basic equipments
+                         with safety mesures will be provided with a guide.</p>
+                    <button type="button" class="btn btn-secondary btn-sm">Read More</button>
+                </div>
+                <div class="feature col" id="vertical">
+                    
+                    <h2>Mountain Climbing</h2>
+                    <p>Treking with your group is always a upthrilling moment and we assure to provide with
+                        all the safety gears and tour guide.</p>
+                    <button type="button" class="btn btn-secondary btn-sm">Read More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{>footer}}
+
+    <script src="../jq/jquery.js" type="text/javascript"></script>
+    <script src="../js/bootstrap.js" type="text/javascript"></script>
+</body>
+
+</html>

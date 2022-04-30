@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Allison&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Allison&family=Lobster&display=swap');
+#bar:hover{
+    background-color: rgb(252, 248, 240);
+    font-weight: bolder;
+}
+#nav:hover{
+    background-color: grey;
+    font-size: 18px;
+    border-radius: 6px;
+}
+#foot:hover{
+    font-size: 20px;
+    color: white;
+}
+#maptext{
+    text-decoration: underline;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+
+/* @media (min-width: 768px) */
+#input1{
+    /* flex: 0 0 auto; */
+    width: 100%;
+}
+/* #map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+#map-responsive iframe{
+    left:0;
+    top:0;
+    height:20%;
+    width:100%;
+    position:absolute;
+} */

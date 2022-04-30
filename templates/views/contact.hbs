@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    {{!-- both link are refering to the same bootstrap
+    only css is defined as node_modules/bootstrap/dist/css in app.js --}}
+</head>
+
+<body>
+    {{>navbar}}
+    <h1 style="text-align: center; font-family: 'Open Sans Condensed', sans-serif;" class="mt-5 "> Contact Us</h1>
+
+    <form action="/contact" method="POST" class="row g-3 w-50 mt-2 mx-auto">
+        <div class="col-md-6 d-inline">
+            <label for="inputEmail4" class="form-label" id="input1">Name</label>
+            <input type="text" class="form-control" style ="width:100%;" id="inputEmail4" name="name" placeholder="Enter your name">
+        </div>
+        <div class="col-md-6">
+            <label for="inputEmail4" class="form-label"  >Contact</label>
+            <input type="number" class="form-control" style="width: 100%;" id="inputEmail4" name="contact" placeholder="Enter your Contact">
+        </div>
+        <div class="col-md-6" id="input">
+            <label for="inputEmail4" class="form-label" >Email</label>
+            <input type="email" class="form-control" id="inputEmail4" placeholder="Enter your Email">
+        </div>
+
+        <div class="col-12">
+            <label for="inputAddress" class="form-label">Address</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="address">
+        </div>
+        {{!-- <div class="col-md-6">
+            <label for="inputPassword4" class="form-label">Password</label>
+            <input type="password" class="form-control" id="inputPassword4">
+        </div> --}}
+
+        {{!-- <div class="col-md-6">
+            <label for="inputCity" class="form-label">City</label>
+            <input type="text" class="form-control" id="inputCity" name="city">
+        </div> --}}
+        {{!-- <div class="col-md-4">
+            <label for="inputState" class="form-label">State</label>
+            <select id="inputState" class="form-select">
+                <option selected>Choose...</option>
+                <option>...</option>
+            </select>
+        </div> --}}
+
+        {{!-- <div class="col-12">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                    Check me out
+                </label>
+            </div>
+        </div> --}}
+        <div class="input-group">
+            <span class="input-group-text">Message</span>
+            <textarea class="form-control" aria-label="With textarea" name="message"></textarea>
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+
+
+    {{>footer}}
+    <script src="../jq/jquery.js" type="text/javascript"></script>
+    <script src="../js/bootstrap.js" type="text/javascript"></script>
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    
+
+    
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#" style="color: white; font-family: 'Lobster', cursive;">DESTINATIONS.com</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto">
+            <li class="nav-item active" id="nav">
+                <a class="nav-link"  href="/">Home <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item active" id="nav">
+                <a class="nav-link" href="/about">About Us</a>
+            </li>
+            <li class="nav-item" id="nav">
+                <a class="nav-link" href="/services">Services</a>
+            </li>
+            <li class="nav-item" id="nav">
+                <a class="nav-link" href="/gallery">Gallery</a>
+            </li>
+            <li class="nav-item active" id="nav">
+                <a class="nav-link" href="/contact">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+    <div class="mx-2">
+        <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal"
+            data-bs-target="#loginModal">LogIn</button>
+        <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+            data-bs-target="#signUpModal">SignUp</button>
+    </div>
+
+</nav>
+{{!-- login modal --}}
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Log In</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>For New Users</p>
+                <form class="row g-3">
+                    <div class="col-md-6">
+                        <label for="inputEmail4" class="form-label">Name</label>
+                        <input type="string" class="form-control" id="inputEmail4">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputEmail4" class="form-label">Contact</label>
+                        <input type="number" class="form-control" id="inputEmail4">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputEmail4" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="inputEmail4">
+                    </div>
+
+                    <div class="col-12">
+                        <label for="inputAddress" class="form-label">Address</label>
+                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputPassword4" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="inputPassword4">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Login</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{!-- signup modal --}}
+<div class="modal" id="signUpModal" tabindex="-1" role=" dialog" aria-labelledby="signUpModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Sign Up</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    {{!-- <img class="mb-4" src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="72"
+                        height="57"> --}}
+                    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+
+                    <div class="form-floating">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">Email address</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword">Password</label>
+                    </div>
+
+                    <div class="checkbox mb-3">
+                        <label>
+                            <input type="checkbox" value="remember-me"> Remember me
+                        </label>
+                    </div>
+                    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+                    <p class="mt-5 mb-3 text-muted">© 2017–2021</p>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+{{!-- partials k andar wo file rakhenge jo har get request ka files k liye common rehne waal h
+like for eg.-> navbar , footer, etc ye sb home page ho ya about ya fir contact us ye footer aur navbar
+sbme rahega hi aur partials ka wo file har jaah access krne k liye {{>navbar}} likh dena hoga baar baar uska
+code ko copy paste krne ka jarrorat v nhi hoga . thts the power of using view engine instead of direct html file.
+
+page sko dynamically access krne ke liye href="/gallery html tag me dena hoga aur fir app.get("/services", (req,res) =>{
+res.render("services"); aisa get request express k through krna hoga apna website dynamically
+requests lene k liye ready ho jaayega.--}}
+
+{{!-- NOTE :-> Always use this format for making a website for ease and simplicity as made in MERN folder. --}}
+
+
+
+
+
+
+{{!-- https://source.unsplash.com//1600x900/?beaches,waterfalls --}}
